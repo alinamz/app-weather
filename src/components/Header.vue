@@ -19,9 +19,9 @@
           />
         </button>
 
-        <button class="header__button header__button_change">
-          <div class="header__btn header__btn_summer">Лето</div>
-          <div class="header__btn header__btn_winter">Зима</div>
+        <button class="header__button header__button_change" @click="changeButton">
+          <div :class="[isChange ? 'header__btn header__btn_summer-dsbl': 'header__btn header__btn_summer']">Лето</div>
+          <div :class="[isChange ? 'header__btn header__btn_winter-act': 'header__btn header__btn_winter']">Зима</div>
         </button>
 
         <button class="header__button header__button_search">
@@ -51,6 +51,17 @@
 <script>
 export default {
   name: "header-container",
+  data() {
+    return {
+      isChange: false
+    }
+  },
+  methods: {
+    changeButton() {
+      this.isChange=!this.isChange
+    }
+  }
+
 };
 </script>
 
@@ -75,6 +86,19 @@ export default {
   height: 96px;
   align-items: center;
   position: relative;
+}
+
+.header__btn_summer-dsbl {
+  background-color: #ffffff;
+  color: #a0a7af;
+}
+
+.header__btn_winter-act {
+  border-radius: 12px;
+  background: #75b6f2;
+  color: #ffffff;
+  height: 40px;
+  width: 65px;
 }
 
 .header__container {
