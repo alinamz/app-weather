@@ -1,24 +1,13 @@
-# weater-vue
+# Описание
+Тестовое задание с реализацией загрузки и отображения прогноза погоды Шымбулака
 
-## Project setup
-```
-npm install
-```
+# Стек
+- Vue.js 3
+- Axios
+- Используемое API - api.openweathermap.org
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+# Запустить проект
+1. `Зарегистрироваться на openweathermap.org и ключ API_KEY для возможности выполнения запросов к их API` 
+1. `Вставить полученный API_KEY в файл src/config/config.js` 
+1. `Установить нужные зависимости командой npm install`
+1. `Запустить проект командой npm run serve`
